@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>SnackFit — Upload Outfit</title>
+  </head>
+  <body>
+    <h1>SnackFit — Upload outfit photo</h1>
+    <form action="/match" enctype="multipart/form-data" method="post">
+      <input name="file" type="file" accept="image/*" />
+      <button type="submit">Judge my outfit</button>
+    </form>
+
+    {% if result %}
+      <h2>Results:</h2>
+      <p>{{ explanation | safe }}</p>
+      <p>{{ color_desc }}</p>
+      <ol>
+        {% for r in result %}
+          <li>
+            <strong>{{ r.label }}</strong> — similarity: {{ "%.3f"|format(r.score) }}, color distance: {{ "%.1f"|format(r.color_dist) }}
+          </li>
+        {% endfor %}
+      </ol>
+    {% endif %}
+  </body>
+</html>
