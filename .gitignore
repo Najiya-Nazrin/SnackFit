@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+dist/
+build/
+.env
+venv/
+.env.*
+.envrc
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Temporary files
+tmp_uploaded.jpg
+
+# VSCode settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# PyTorch model checkpoints (if any)
+*.pt
+*.pth
+
+# Large data files (if you don’t want to push them)
+data/faiss.index
+data/meta.pkl
+
+# Ignore your local dataset if large
+dataset/
