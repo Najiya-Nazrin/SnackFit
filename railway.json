@@ -1,0 +1,8 @@
+{
+  "build": {
+    "commands": [
+      "pip install -r requirements.txt",
+      "pip install torch==2.8.0+cpu -f https://download.pytorch.org/whl/cpu/torch_stable.html"
+    ]
+  }
+}
